@@ -39,6 +39,4 @@ public class BeerDTO{
     @NotNull
     private BeerType type;
 
-    public BeerDTO(Long id, String name, String brand, int max, int quantity, BeerType type) {
-    }
 }
