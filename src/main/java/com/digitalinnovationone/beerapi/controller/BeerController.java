@@ -1,5 +1,7 @@
 package com.digitalinnovationone.beerapi.controller;
 
+import com.digitalinnovationone.beerapi.dto.BeerDTO;
+import com.digitalinnovationone.beerapi.exceptions.BeerAlreadyRegisteredException;
 import com.digitalinnovationone.beerapi.service.BeerService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,7 @@ public class BeerController implements BeerControllerDocs{
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public BeerDTO createBeer(@RequestBody @Valid BeerDTO beerDTO) throws BeerAlreadyRegisteredException{
+    public BeerDTO createBeer(@RequestBody @Valid BeerDTO beerDTO) throws BeerAlreadyRegisteredException {
         return beerService.createBeer(beerDTO);
     }
 
