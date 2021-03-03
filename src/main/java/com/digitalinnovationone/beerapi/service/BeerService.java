@@ -3,6 +3,7 @@ package com.digitalinnovationone.beerapi.service;
 import com.digitalinnovationone.beerapi.dto.BeerDTO;
 import com.digitalinnovationone.beerapi.entity.Beer;
 import com.digitalinnovationone.beerapi.exceptions.BeerAlreadyRegisteredException;
+import com.digitalinnovationone.beerapi.exceptions.BeerNotFoundException;
 import com.digitalinnovationone.beerapi.mapper.BeerMapper;
 import com.digitalinnovationone.beerapi.repository.BeerRepository;
 import lombok.AllArgsConstructor;

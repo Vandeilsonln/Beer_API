@@ -2,6 +2,7 @@ package com.digitalinnovationone.beerapi.controller;
 
 import com.digitalinnovationone.beerapi.dto.BeerDTO;
 import com.digitalinnovationone.beerapi.exceptions.BeerAlreadyRegisteredException;
+import com.digitalinnovationone.beerapi.exceptions.BeerNotFoundException;
 import com.digitalinnovationone.beerapi.service.BeerService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class BeerController implements BeerControllerDocs{
     }
 
     @GetMapping("/{name}")
-    public BeerDTO findByName(@PathVariable String name) throws BeerNotFoundException{
+    public BeerDTO findByName(@PathVariable String name) throws BeerNotFoundException {
         return beerService.findByName(name);
     }
 
